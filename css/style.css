@@ -225,28 +225,18 @@ p {
   font-family: "Factor A";
   font-style: normal;
   font-weight: 400;
+  font-size: 16px;
   line-height: 169%;
   color: #0b1f33;
   padding-bottom: 15px;
 }
 
-@supports (font-size: clamp( 0.75rem , 0.5710290828rem  +  0.8948545861vw , 1rem )) {
-  p {
-    font-size: clamp( 0.75rem , 0.5710290828rem  +  0.8948545861vw , 1rem );
-  }
-}
-
-@supports not (font-size: clamp( 0.75rem , 0.5710290828rem  +  0.8948545861vw , 1rem )) {
-  p {
-    font-size: calc(
-			0.75rem + 0.25 * (100vw - 20rem) / 27.9375
-		);
-  }
-}
-
 p a {
   color: #2a7072;
   border-bottom: 1px solid #2a7072;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 p a:hover {
@@ -258,22 +248,9 @@ div {
   font-family: "Factor A";
   font-style: normal;
   font-weight: 400;
+  font-size: 16px;
   line-height: 18px;
   color: #0b1f33;
-}
-
-@supports (font-size: clamp( 0.75rem , 0.5710290828rem  +  0.8948545861vw , 1rem )) {
-  div {
-    font-size: clamp( 0.75rem , 0.5710290828rem  +  0.8948545861vw , 1rem );
-  }
-}
-
-@supports not (font-size: clamp( 0.75rem , 0.5710290828rem  +  0.8948545861vw , 1rem )) {
-  div {
-    font-size: calc(
-			0.75rem + 0.25 * (100vw - 20rem) / 27.9375
-		);
-  }
 }
 
 ul {
@@ -281,6 +258,7 @@ ul {
   margin-left: 16px;
   font-family: "Factor A";
   font-weight: 400;
+  font-size: 16px;
   line-height: 160%;
 }
 
@@ -294,20 +272,6 @@ ul {
   ul {
     margin-bottom: calc(
 			0.625rem + 0.375 * (100vw - 20rem) / 27.9375
-		);
-  }
-}
-
-@supports (font-size: clamp( 0.75rem , 0.5710290828rem  +  0.8948545861vw , 1rem )) {
-  ul {
-    font-size: clamp( 0.75rem , 0.5710290828rem  +  0.8948545861vw , 1rem );
-  }
-}
-
-@supports not (font-size: clamp( 0.75rem , 0.5710290828rem  +  0.8948545861vw , 1rem )) {
-  ul {
-    font-size: calc(
-			0.75rem + 0.25 * (100vw - 20rem) / 27.9375
 		);
   }
 }
@@ -332,6 +296,7 @@ ol {
   margin-left: 36px;
   font-family: "Factor A";
   font-weight: 400;
+  font-size: 16px;
   line-height: 160%;
 }
 
@@ -359,20 +324,6 @@ ol {
   ol {
     margin-bottom: calc(
 			0.625rem + 0.375 * (100vw - 20rem) / 27.9375
-		);
-  }
-}
-
-@supports (font-size: clamp( 0.75rem , 0.5710290828rem  +  0.8948545861vw , 1rem )) {
-  ol {
-    font-size: clamp( 0.75rem , 0.5710290828rem  +  0.8948545861vw , 1rem );
-  }
-}
-
-@supports not (font-size: clamp( 0.75rem , 0.5710290828rem  +  0.8948545861vw , 1rem )) {
-  ol {
-    font-size: calc(
-			0.75rem + 0.25 * (100vw - 20rem) / 27.9375
 		);
   }
 }
@@ -696,7 +647,14 @@ ol {
           align-items: center;
 }
 
-.list li {
+.list__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 18px;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 calc(25% - 22.5px);
           flex: 0 0 calc(25% - 22.5px);
@@ -715,7 +673,7 @@ ol {
   /* Анимируем все свойства */
 }
 
-.list li::before {
+.list__link::before {
   content: "";
   position: absolute;
   top: 0;
@@ -734,28 +692,18 @@ ol {
   border-radius: 10px;
 }
 
-.list li:hover::before {
+.list__link:hover::before {
   opacity: 1;
 }
 
-.list li:hover {
+.list__link:hover {
   -webkit-filter: drop-shadow(0px 8px 30px rgba(142, 178, 178, 0.35));
           filter: drop-shadow(0px 8px 30px rgba(142, 178, 178, 0.35));
 }
 
-.list__link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 18px;
-}
-
 .list__link img {
-  min-height: 90px;
-  min-width: 100px;
+  max-height: 110px;
+  max-width: 110px;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: top right;
@@ -993,26 +941,13 @@ ol {
   font-family: "Factor A";
   font-style: normal;
   font-weight: 400;
+  font-size: 16px;
   line-height: 160%;
   color: #2a7072;
-  border-bottom: 1px dashed #2a7072;
+  border-bottom: 1px dotted #2a7072;
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
-}
-
-@supports (font-size: clamp( 0.75rem , 0.5710290828rem  +  0.8948545861vw , 1rem )) {
-  .spollers__title {
-    font-size: clamp( 0.75rem , 0.5710290828rem  +  0.8948545861vw , 1rem );
-  }
-}
-
-@supports not (font-size: clamp( 0.75rem , 0.5710290828rem  +  0.8948545861vw , 1rem )) {
-  .spollers__title {
-    font-size: calc(
-			0.75rem + 0.25 * (100vw - 20rem) / 27.9375
-		);
-  }
 }
 
 .spollers__title:hover {
@@ -1124,6 +1059,14 @@ ol {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
   color: #2a7072;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.header__bread li a:hover {
+  color: #ff5600;
+  border-color: #ff5600;
 }
 
 .header__bread li:not(:first-child)::before {
@@ -1169,6 +1112,7 @@ ol {
   font-weight: 400;
   line-height: 167%;
   color: #5d868e;
+  padding-bottom: 0;
 }
 
 @supports (font-size: clamp( 0.625rem , 0.6rem  +  0.125vw , 0.75rem )) {
@@ -1548,7 +1492,7 @@ main {
     right: 60px;
   }
 
-  .list li {
+  .list__link {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 calc(33.3333333333% - 20px);
             flex: 0 0 calc(33.3333333333% - 20px);
@@ -1592,7 +1536,7 @@ main {
     right: 0px;
   }
 
-  .list li {
+  .list__link {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 calc(50% - 15px);
             flex: 0 0 calc(50% - 15px);
@@ -2070,6 +2014,11 @@ main {
 }
 
 @media (max-width: 670px) {
+  .header {
+    -webkit-box-shadow: 0px 0px 0px rgba(142, 178, 178, 0.25);
+            box-shadow: 0px 0px 0px rgba(142, 178, 178, 0.25);
+  }
+
   .header__container .header__info {
     display: none;
   }
@@ -2099,6 +2048,7 @@ main {
   h2 {
     padding-right: 140px;
     line-height: 139%;
+    margin-bottom: 8px;
   }
 
 @supports (padding-left: clamp( 0.0000000625rem , -5.9999998375rem  +  29.9999995vw , 3.75rem )) {
@@ -2129,7 +2079,7 @@ main {
     }
 }
 
-  .list li {
+  .list__link {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 100%;
             flex: 0 0 100%;
