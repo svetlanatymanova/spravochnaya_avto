@@ -451,16 +451,16 @@ ol {
   color: #000000;
 }
 
-@supports (font-size: clamp( 0.875rem , 0.7918473547rem  +  0.1734605377vw , 1rem )) {
+@supports (font-size: clamp( 0.875rem , 0.85rem  +  0.125vw , 1rem )) {
   .header__info {
-    font-size: clamp( 0.875rem , 0.7918473547rem  +  0.1734605377vw , 1rem );
+    font-size: clamp( 0.875rem , 0.85rem  +  0.125vw , 1rem );
   }
 }
 
-@supports not (font-size: clamp( 0.875rem , 0.7918473547rem  +  0.1734605377vw , 1rem )) {
+@supports not (font-size: clamp( 0.875rem , 0.85rem  +  0.125vw , 1rem )) {
   .header__info {
     font-size: calc(
-			0.875rem + 0.125 * (100vw - 47.9375rem) / 72.0625
+			0.875rem + 0.125 * (100vw - 20rem) / 100
 		);
   }
 }
@@ -2021,6 +2021,10 @@ main {
   .header {
     -webkit-box-shadow: 0px 0px 0px rgba(142, 178, 178, 0.25);
             box-shadow: 0px 0px 0px rgba(142, 178, 178, 0.25);
+  }
+
+  .header__info {
+    background: #ffffff;
   }
 
   .header__container .header__info {
