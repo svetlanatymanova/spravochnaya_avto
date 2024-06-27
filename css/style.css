@@ -938,6 +938,10 @@ ol {
 
 .spollers__title {
   text-align: left;
+}
+
+.spollers__title span {
+  text-align: left;
   font-family: "Factor A";
   font-style: normal;
   font-weight: 400;
@@ -950,7 +954,7 @@ ol {
   transition: all 0.3s ease 0s;
 }
 
-.spollers__title:hover {
+.spollers__title span:hover {
   color: #ff5600;
   border-color: #ff5600;
 }
