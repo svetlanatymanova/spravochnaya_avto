@@ -280,9 +280,9 @@ ul li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
   gap: 10px;
 }
 
@@ -354,64 +354,269 @@ ol {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  gap: 7.7px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   white-space: nowrap;
   background: #ff5600;
   border-radius: 30px;
-  padding-top: 9px;
-  padding-bottom: 9px;
-  padding-left: 18px;
-  padding-right: 18px;
   -webkit-transition: 0.3s all;
   -o-transition: 0.3s all;
   transition: 0.3s all;
+  position: relative;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  overflow: hidden;
 }
 
-.button:hover {
-  background: #f05201;
-}
-
-.button svg {
-  width: 18.5px;
-  height: 18.5px;
-}
-
-.button span {
-  font-family: DIN Pro;
-  font-weight: 700;
-  font-size: 22px;
-  text-transform: uppercase;
-  color: #ffffff;
-}
-
-.button-big {
-  padding: 12px 24px;
-}
-
-@supports (gap: clamp( 0.5rem , 0.45rem  +  0.25vw , 0.75rem )) {
-  .button-big {
-    gap: clamp( 0.5rem , 0.45rem  +  0.25vw , 0.75rem );
+@supports (padding-top: clamp( 0.5rem , 0.4552572707rem  +  0.2237136465vw , 0.5625rem )) {
+  .button {
+    padding-top: clamp( 0.5rem , 0.4552572707rem  +  0.2237136465vw , 0.5625rem );
   }
 }
 
-@supports not (gap: clamp( 0.5rem , 0.45rem  +  0.25vw , 0.75rem )) {
-  .button-big {
-    gap: calc(
-			0.5rem + 0.25 * (100vw - 20rem) / 100
+@supports not (padding-top: clamp( 0.5rem , 0.4552572707rem  +  0.2237136465vw , 0.5625rem )) {
+  .button {
+    padding-top: calc(
+			0.5rem + 0.0625 * (100vw - 20rem) / 27.9375
 		);
   }
 }
 
-.button-big svg {
-  width: 28.5px;
-  height: 28.5px;
+@supports (padding-bottom: clamp( 0.5rem , 0.4552572707rem  +  0.2237136465vw , 0.5625rem )) {
+  .button {
+    padding-bottom: clamp( 0.5rem , 0.4552572707rem  +  0.2237136465vw , 0.5625rem );
+  }
 }
 
-.button-big span {
-  font-size: 33px;
+@supports not (padding-bottom: clamp( 0.5rem , 0.4552572707rem  +  0.2237136465vw , 0.5625rem )) {
+  .button {
+    padding-bottom: calc(
+			0.5rem + 0.0625 * (100vw - 20rem) / 27.9375
+		);
+  }
+}
+
+@supports (padding-left: clamp( 0.5625rem , 0.1598154362rem  +  2.0134228188vw , 1.125rem )) {
+  .button {
+    padding-left: clamp( 0.5625rem , 0.1598154362rem  +  2.0134228188vw , 1.125rem );
+  }
+}
+
+@supports not (padding-left: clamp( 0.5625rem , 0.1598154362rem  +  2.0134228188vw , 1.125rem )) {
+  .button {
+    padding-left: calc(
+			0.5625rem + 0.5625 * (100vw - 20rem) / 27.9375
+		);
+  }
+}
+
+@supports (padding-right: clamp( 0.5625rem , 0.1598154362rem  +  2.0134228188vw , 1.125rem )) {
+  .button {
+    padding-right: clamp( 0.5625rem , 0.1598154362rem  +  2.0134228188vw , 1.125rem );
+  }
+}
+
+@supports not (padding-right: clamp( 0.5625rem , 0.1598154362rem  +  2.0134228188vw , 1.125rem )) {
+  .button {
+    padding-right: calc(
+			0.5625rem + 0.5625 * (100vw - 20rem) / 27.9375
+		);
+  }
+}
+
+@supports (width: clamp( 1rem , 0.8657718121rem  +  0.6711409396vw , 1.1875rem )) {
+  .button svg {
+    width: clamp( 1rem , 0.8657718121rem  +  0.6711409396vw , 1.1875rem );
+  }
+}
+
+@supports not (width: clamp( 1rem , 0.8657718121rem  +  0.6711409396vw , 1.1875rem )) {
+  .button svg {
+    width: calc(
+			1rem + 0.1875 * (100vw - 20rem) / 27.9375
+		);
+  }
+}
+
+@supports (height: clamp( 1rem , 0.8657718121rem  +  0.6711409396vw , 1.1875rem )) {
+  .button svg {
+    height: clamp( 1rem , 0.8657718121rem  +  0.6711409396vw , 1.1875rem );
+  }
+}
+
+@supports not (height: clamp( 1rem , 0.8657718121rem  +  0.6711409396vw , 1.1875rem )) {
+  .button svg {
+    height: calc(
+			1rem + 0.1875 * (100vw - 20rem) / 27.9375
+		);
+  }
+}
+
+.button span {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 1;
+  z-index: 2;
+  font-family: DIN Pro;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+@supports (gap: clamp( 0.5rem , 0.7144854586rem  +  -0.4474272931vw , 0.625rem )) {
+  .button span {
+    gap: clamp( 0.5rem , 0.7144854586rem  +  -0.4474272931vw , 0.625rem );
+  }
+}
+
+@supports not (gap: clamp( 0.5rem , 0.7144854586rem  +  -0.4474272931vw , 0.625rem )) {
+  .button span {
+    gap: calc(
+			0.625rem + -0.125 * (100vw - 20rem) / 27.9375
+		);
+  }
+}
+
+@supports (font-size: clamp( 1.125rem , 0.9460290828rem  +  0.8948545861vw , 1.375rem )) {
+  .button span {
+    font-size: clamp( 1.125rem , 0.9460290828rem  +  0.8948545861vw , 1.375rem );
+  }
+}
+
+@supports not (font-size: clamp( 1.125rem , 0.9460290828rem  +  0.8948545861vw , 1.375rem )) {
+  .button span {
+    font-size: calc(
+			1.125rem + 0.25 * (100vw - 20rem) / 27.9375
+		);
+  }
+}
+
+.button::before {
+  z-index: 1;
+  --size: 0;
+  content: "";
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  width: var(--size);
+  height: var(--size);
+  background: -o-radial-gradient(circle closest-side, #4405f7, transparent);
+  background: radial-gradient(circle closest-side, #4405f7, transparent);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: width 0.2s ease, height 0.2s ease;
+  -o-transition: width 0.2s ease, height 0.2s ease;
+  transition: width 0.2s ease, height 0.2s ease;
+}
+
+.button:hover::before {
+  --size: 400px;
+}
+
+@supports (padding-top: clamp( 0.5rem , 0.3657718121rem  +  0.6711409396vw , 0.6875rem )) {
+  .button-big {
+    padding-top: clamp( 0.5rem , 0.3657718121rem  +  0.6711409396vw , 0.6875rem );
+  }
+}
+
+@supports not (padding-top: clamp( 0.5rem , 0.3657718121rem  +  0.6711409396vw , 0.6875rem )) {
+  .button-big {
+    padding-top: calc(
+			0.5rem + 0.1875 * (100vw - 20rem) / 27.9375
+		);
+  }
+}
+
+@supports (padding-bottom: clamp( 0.5rem , 0.3657718121rem  +  0.6711409396vw , 0.6875rem )) {
+  .button-big {
+    padding-bottom: clamp( 0.5rem , 0.3657718121rem  +  0.6711409396vw , 0.6875rem );
+  }
+}
+
+@supports not (padding-bottom: clamp( 0.5rem , 0.3657718121rem  +  0.6711409396vw , 0.6875rem )) {
+  .button-big {
+    padding-bottom: calc(
+			0.5rem + 0.1875 * (100vw - 20rem) / 27.9375
+		);
+  }
+}
+
+@supports (padding-left: clamp( 0.6875rem , 0.105844519rem  +  2.9082774049vw , 1.5rem )) {
+  .button-big {
+    padding-left: clamp( 0.6875rem , 0.105844519rem  +  2.9082774049vw , 1.5rem );
+  }
+}
+
+@supports not (padding-left: clamp( 0.6875rem , 0.105844519rem  +  2.9082774049vw , 1.5rem )) {
+  .button-big {
+    padding-left: calc(
+			0.6875rem + 0.8125 * (100vw - 20rem) / 27.9375
+		);
+  }
+}
+
+@supports (padding-right: clamp( 0.6875rem , 0.105844519rem  +  2.9082774049vw , 1.5rem )) {
+  .button-big {
+    padding-right: clamp( 0.6875rem , 0.105844519rem  +  2.9082774049vw , 1.5rem );
+  }
+}
+
+@supports not (padding-right: clamp( 0.6875rem , 0.105844519rem  +  2.9082774049vw , 1.5rem )) {
+  .button-big {
+    padding-right: calc(
+			0.6875rem + 0.8125 * (100vw - 20rem) / 27.9375
+		);
+  }
+}
+
+@supports (width: clamp( 1rem , 0.4630872483rem  +  2.6845637584vw , 1.75rem )) {
+  .button-big svg {
+    width: clamp( 1rem , 0.4630872483rem  +  2.6845637584vw , 1.75rem );
+  }
+}
+
+@supports not (width: clamp( 1rem , 0.4630872483rem  +  2.6845637584vw , 1.75rem )) {
+  .button-big svg {
+    width: calc(
+			1rem + 0.75 * (100vw - 20rem) / 27.9375
+		);
+  }
+}
+
+@supports (height: clamp( 1rem , 0.4630872483rem  +  2.6845637584vw , 1.75rem )) {
+  .button-big svg {
+    height: clamp( 1rem , 0.4630872483rem  +  2.6845637584vw , 1.75rem );
+  }
+}
+
+@supports not (height: clamp( 1rem , 0.4630872483rem  +  2.6845637584vw , 1.75rem )) {
+  .button-big svg {
+    height: calc(
+			1rem + 0.75 * (100vw - 20rem) / 27.9375
+		);
+  }
+}
+
+@supports (font-size: clamp( 1.125rem , 0.4538590604rem  +  3.355704698vw , 2.0625rem )) {
+  .button-big span {
+    font-size: clamp( 1.125rem , 0.4538590604rem  +  3.355704698vw , 2.0625rem );
+  }
+}
+
+@supports not (font-size: clamp( 1.125rem , 0.4538590604rem  +  3.355704698vw , 2.0625rem )) {
+  .button-big span {
+    font-size: calc(
+			1.125rem + 0.9375 * (100vw - 20rem) / 27.9375
+		);
+  }
 }
 
 .header {
@@ -647,6 +852,27 @@ ol {
           align-items: center;
 }
 
+.list__img {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  height: 100px;
+  width: 110px;
+  position: relative;
+}
+
+.list__img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: bottom left;
+     object-position: bottom left;
+}
+
 .list__link {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -654,7 +880,8 @@ ol {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 18px;
+  gap: 30px;
+  height: auto;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 calc(25% - 22.5px);
           flex: 0 0 calc(25% - 22.5px);
@@ -699,15 +926,6 @@ ol {
 .list__link:hover {
   -webkit-filter: drop-shadow(0px 8px 30px rgba(142, 178, 178, 0.35));
           filter: drop-shadow(0px 8px 30px rgba(142, 178, 178, 0.35));
-}
-
-.list__link img {
-  max-height: 110px;
-  max-width: 110px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: top right;
-     object-position: top right;
 }
 
 .list__link span {
@@ -1485,6 +1703,16 @@ main {
 
 /* Slide styles end */
 
+@media (min-width: 1420px) {
+  .list__link:nth-child(1) {
+    gap: 14px;
+  }
+
+  .list__link:nth-child(5) {
+    gap: 14px;
+  }
+}
+
 @media (max-width: 1420px) {
   [class*=__container] {
     max-width: 900px;
@@ -1566,150 +1794,6 @@ main {
     .title {
       font-size: calc(
 			1.5rem + 0.5 * (100vw - 20rem) / 27.9375
-		);
-    }
-}
-
-  .button {
-    gap: 11px;
-  }
-
-@supports (padding-top: clamp( 0.5rem , 0.4105145414rem  +  0.4474272931vw , 0.625rem )) {
-    .button {
-      padding-top: clamp( 0.5rem , 0.4105145414rem  +  0.4474272931vw , 0.625rem );
-    }
-}
-
-@supports not (padding-top: clamp( 0.5rem , 0.4105145414rem  +  0.4474272931vw , 0.625rem )) {
-    .button {
-      padding-top: calc(
-			0.5rem + 0.125 * (100vw - 20rem) / 27.9375
-		);
-    }
-}
-
-@supports (padding-bottom: clamp( 0.5rem , 0.4105145414rem  +  0.4474272931vw , 0.625rem )) {
-    .button {
-      padding-bottom: clamp( 0.5rem , 0.4105145414rem  +  0.4474272931vw , 0.625rem );
-    }
-}
-
-@supports not (padding-bottom: clamp( 0.5rem , 0.4105145414rem  +  0.4474272931vw , 0.625rem )) {
-    .button {
-      padding-bottom: calc(
-			0.5rem + 0.125 * (100vw - 20rem) / 27.9375
-		);
-    }
-}
-
-@supports (padding-left: clamp( 0.5625rem , 0.1598154362rem  +  2.0134228188vw , 1.125rem )) {
-    .button {
-      padding-left: clamp( 0.5625rem , 0.1598154362rem  +  2.0134228188vw , 1.125rem );
-    }
-}
-
-@supports not (padding-left: clamp( 0.5625rem , 0.1598154362rem  +  2.0134228188vw , 1.125rem )) {
-    .button {
-      padding-left: calc(
-			0.5625rem + 0.5625 * (100vw - 20rem) / 27.9375
-		);
-    }
-}
-
-@supports (padding-right: clamp( 0.5625rem , 0.1598154362rem  +  2.0134228188vw , 1.125rem )) {
-    .button {
-      padding-right: clamp( 0.5625rem , 0.1598154362rem  +  2.0134228188vw , 1.125rem );
-    }
-}
-
-@supports not (padding-right: clamp( 0.5625rem , 0.1598154362rem  +  2.0134228188vw , 1.125rem )) {
-    .button {
-      padding-right: calc(
-			0.5625rem + 0.5625 * (100vw - 20rem) / 27.9375
-		);
-    }
-}
-
-@supports (font-size: clamp( 1.125rem , 0.9460290828rem  +  0.8948545861vw , 1.375rem )) {
-    .button span {
-      font-size: clamp( 1.125rem , 0.9460290828rem  +  0.8948545861vw , 1.375rem );
-    }
-}
-
-@supports not (font-size: clamp( 1.125rem , 0.9460290828rem  +  0.8948545861vw , 1.375rem )) {
-    .button span {
-      font-size: calc(
-			1.125rem + 0.25 * (100vw - 20rem) / 27.9375
-		);
-    }
-}
-
-@supports (padding-top: clamp( 0.5rem , 0.3210290828rem  +  0.8948545861vw , 0.75rem )) {
-    .button-big {
-      padding-top: clamp( 0.5rem , 0.3210290828rem  +  0.8948545861vw , 0.75rem );
-    }
-}
-
-@supports not (padding-top: clamp( 0.5rem , 0.3210290828rem  +  0.8948545861vw , 0.75rem )) {
-    .button-big {
-      padding-top: calc(
-			0.5rem + 0.25 * (100vw - 20rem) / 27.9375
-		);
-    }
-}
-
-@supports (padding-bottom: clamp( 0.5rem , 0.3210290828rem  +  0.8948545861vw , 0.75rem )) {
-    .button-big {
-      padding-bottom: clamp( 0.5rem , 0.3210290828rem  +  0.8948545861vw , 0.75rem );
-    }
-}
-
-@supports not (padding-bottom: clamp( 0.5rem , 0.3210290828rem  +  0.8948545861vw , 0.75rem )) {
-    .button-big {
-      padding-bottom: calc(
-			0.5rem + 0.25 * (100vw - 20rem) / 27.9375
-		);
-    }
-}
-
-@supports (padding-left: clamp( 0.875rem , 0.4275727069rem  +  2.2371364653vw , 1.5rem )) {
-    .button-big {
-      padding-left: clamp( 0.875rem , 0.4275727069rem  +  2.2371364653vw , 1.5rem );
-    }
-}
-
-@supports not (padding-left: clamp( 0.875rem , 0.4275727069rem  +  2.2371364653vw , 1.5rem )) {
-    .button-big {
-      padding-left: calc(
-			0.875rem + 0.625 * (100vw - 20rem) / 27.9375
-		);
-    }
-}
-
-@supports (padding-right: clamp( 0.875rem , 0.4275727069rem  +  2.2371364653vw , 1.5rem )) {
-    .button-big {
-      padding-right: clamp( 0.875rem , 0.4275727069rem  +  2.2371364653vw , 1.5rem );
-    }
-}
-
-@supports not (padding-right: clamp( 0.875rem , 0.4275727069rem  +  2.2371364653vw , 1.5rem )) {
-    .button-big {
-      padding-right: calc(
-			0.875rem + 0.625 * (100vw - 20rem) / 27.9375
-		);
-    }
-}
-
-@supports (font-size: clamp( 1.125rem , 0.4538590604rem  +  3.355704698vw , 2.0625rem )) {
-    .button-big span {
-      font-size: clamp( 1.125rem , 0.4538590604rem  +  3.355704698vw , 2.0625rem );
-    }
-}
-
-@supports not (font-size: clamp( 1.125rem , 0.4538590604rem  +  3.355704698vw , 2.0625rem )) {
-    .button-big span {
-      font-size: calc(
-			1.125rem + 0.9375 * (100vw - 20rem) / 27.9375
 		);
     }
 }
@@ -2052,37 +2136,31 @@ main {
   }
 }
 
-@media (max-width: 520px) {
-  h2 {
-    padding-right: 140px;
-    line-height: 139%;
-    margin-bottom: 8px;
-  }
-
-@supports (padding-left: clamp( 0.0000000625rem , -5.9999998375rem  +  29.9999995vw , 3.75rem )) {
+@media (max-width: 570px) {
+@supports (padding-left: clamp( 0.0000000625rem , -4.7999998575rem  +  23.9999996vw , 3.75rem )) {
     .list {
-      padding-left: clamp( 0.0000000625rem , -5.9999998375rem  +  29.9999995vw , 3.75rem );
+      padding-left: clamp( 0.0000000625rem , -4.7999998575rem  +  23.9999996vw , 3.75rem );
     }
 }
 
-@supports not (padding-left: clamp( 0.0000000625rem , -5.9999998375rem  +  29.9999995vw , 3.75rem )) {
+@supports not (padding-left: clamp( 0.0000000625rem , -4.7999998575rem  +  23.9999996vw , 3.75rem )) {
     .list {
       padding-left: calc(
-			0.0000000625rem + 3.7499999375 * (100vw - 20rem) / 12.5
+			0.0000000625rem + 3.7499999375 * (100vw - 20rem) / 15.625
 		);
     }
 }
 
-@supports (padding-right: clamp( 0.0000000625rem , -5.9999998375rem  +  29.9999995vw , 3.75rem )) {
+@supports (padding-right: clamp( 0.0000000625rem , -4.7999998575rem  +  23.9999996vw , 3.75rem )) {
     .list {
-      padding-right: clamp( 0.0000000625rem , -5.9999998375rem  +  29.9999995vw , 3.75rem );
+      padding-right: clamp( 0.0000000625rem , -4.7999998575rem  +  23.9999996vw , 3.75rem );
     }
 }
 
-@supports not (padding-right: clamp( 0.0000000625rem , -5.9999998375rem  +  29.9999995vw , 3.75rem )) {
+@supports not (padding-right: clamp( 0.0000000625rem , -4.7999998575rem  +  23.9999996vw , 3.75rem )) {
     .list {
       padding-right: calc(
-			0.0000000625rem + 3.7499999375 * (100vw - 20rem) / 12.5
+			0.0000000625rem + 3.7499999375 * (100vw - 20rem) / 15.625
 		);
     }
 }
@@ -2092,21 +2170,17 @@ main {
         -ms-flex: 0 0 100%;
             flex: 0 0 100%;
   }
+}
+
+@media (max-width: 520px) {
+  h2 {
+    padding-right: 140px;
+    line-height: 139%;
+    margin-bottom: 8px;
+  }
 
   .section-questions__content {
     padding: 0;
-  }
-}
-
-@media (max-width: 480px) {
-  .button svg {
-    width: 16.5px;
-    height: 16.5px;
-  }
-
-  .button-big svg {
-    width: 16.5px;
-    height: 16.5px;
   }
 }
 

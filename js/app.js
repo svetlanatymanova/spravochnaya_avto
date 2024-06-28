@@ -3648,6 +3648,16 @@
             clickable: true
         }
     });
+    const buttons = document.querySelectorAll(".button");
+    if (buttons.length > 0) buttons.forEach((button => {
+        button.addEventListener("mousemove", (e => {
+            const rect = button.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            button.style.setProperty("--x", `${x}px`);
+            button.style.setProperty("--y", `${y}px`);
+        }));
+    }));
     window["FLS"] = true;
     isWebp();
     spollers();
