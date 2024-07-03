@@ -619,6 +619,125 @@ ol {
   }
 }
 
+@-webkit-keyframes shake {
+  0%, 50%, 100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+
+  5% {
+    -webkit-transform: translateX(-2px);
+            transform: translateX(-2px);
+  }
+
+  10% {
+    -webkit-transform: translateX(2px);
+            transform: translateX(2px);
+  }
+
+  15% {
+    -webkit-transform: translateX(-2px);
+            transform: translateX(-2px);
+  }
+
+  20% {
+    -webkit-transform: translateX(2px);
+            transform: translateX(2px);
+  }
+
+  25% {
+    -webkit-transform: translateX(-2px);
+            transform: translateX(-2px);
+  }
+
+  30% {
+    -webkit-transform: translateX(2px);
+            transform: translateX(2px);
+  }
+
+  35% {
+    -webkit-transform: translateX(-2px);
+            transform: translateX(-2px);
+  }
+
+  40% {
+    -webkit-transform: translateX(2px);
+            transform: translateX(2px);
+  }
+
+  45% {
+    -webkit-transform: translateX(-2px);
+            transform: translateX(-2px);
+  }
+
+  50% {
+    -webkit-transform: translateX(2px);
+            transform: translateX(2px);
+  }
+}
+
+@keyframes shake {
+  0%, 50%, 100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+
+  5% {
+    -webkit-transform: translateX(-2px);
+            transform: translateX(-2px);
+  }
+
+  10% {
+    -webkit-transform: translateX(2px);
+            transform: translateX(2px);
+  }
+
+  15% {
+    -webkit-transform: translateX(-2px);
+            transform: translateX(-2px);
+  }
+
+  20% {
+    -webkit-transform: translateX(2px);
+            transform: translateX(2px);
+  }
+
+  25% {
+    -webkit-transform: translateX(-2px);
+            transform: translateX(-2px);
+  }
+
+  30% {
+    -webkit-transform: translateX(2px);
+            transform: translateX(2px);
+  }
+
+  35% {
+    -webkit-transform: translateX(-2px);
+            transform: translateX(-2px);
+  }
+
+  40% {
+    -webkit-transform: translateX(2px);
+            transform: translateX(2px);
+  }
+
+  45% {
+    -webkit-transform: translateX(-2px);
+            transform: translateX(-2px);
+  }
+
+  50% {
+    -webkit-transform: translateX(2px);
+            transform: translateX(2px);
+  }
+}
+
+.phone-icon {
+  -webkit-animation: shake 4s infinite;
+          animation: shake 4s infinite;
+}
+
 .header {
   position: fixed;
   width: 100%;
